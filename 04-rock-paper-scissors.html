@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+        const randomNum = Math.random();
+        if (randomNum >= 0 && randomNum < 1/3) {
+            const computerMove = 'Rock'
+            alert(`computer move: ${computerMove}`)
+            console.log(gamePoints)
+        } else if (randomNum >= 1/3 && randomNum < 2/3) {
+            const computerMove = 'Paper'
+            alert(`computer move: ${computerMove}`)
+            gamePoints = gamePoints - 1 
+            console.log(gamePoints)
+        } else {
+            alert('You picked Rock, Computer picked Scissors; You win!')
+            gamePoints = gamePoints + 1
+            console.log(gamePoints)
+        }
+    ">Rock</button>
+    <button onclick="
+    const randomNum2 = Math.random();
+        if (randomNum2 >= 0 && randomNum2 < 1/3) {
+            alert(`You picked Paper, Computer picked Rock; You win!`)
+            gamePoints = gamePoints + 1;
+            console.log(gamePoints)
+        } else if (randomNum2 >= 1/3 && randomNum2 < 2/3) {
+            alert(`You picked Paper, Computer picked Paper; it's a tie`)
+            console.log(gamePoints)
+        } else {
+            alert('You picked Paper, Computer picked Scissors; You lose!')
+            gamePoints = gamePoints - 1
+            console.log(gamePoints)
+        }
+    ">Paper</button>
+    <button onclick="
+    const randomNum3 = Math.random()
+        if (randomNum3 >= 0 && randomNum3 < 1/3) {
+            alert(`You picked Paper, Computer picked Rock; You win!`)
+            gamePoints = gamePoints + 1;
+            console.log(gamePoints);
+        } else if (randomNum3 >= 1/3 && randomNum3 < 2/3) {
+            alert(`You picked Paper, Computer picked Paper; It's a tie!`)
+            console.log(gamePoints);
+        } else {
+            alert(`You picked Paper, Computer picked Scissors; You Lose!`)
+            gamePoints = gamePoints - 1;
+            console.log(gamePoints);
+        }
+    ">Scissors</button>
+    <script>
+        let gamePoints = 0;
+
+
+        // Truthy ,Falsy values:
+        let cartProducts = 6;
+        let noProducts = 0;
+        
+        if (cartProducts) {
+            console.log('cart has products.')
+        }
+        if (noProducts) {
+            console.log('cart has no products')
+        }
+
+
+        let result = true ? 'truthy' : 'falsy'
+        console.log(result)
+
+        const currency = 'EUR' || 'USD'
+        console.log(currency)
+
+        let currencyUSD = '' || 'USD'
+        console.log(currencyUSD)
+
+    </script>
+</body>
+</html>

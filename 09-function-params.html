@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add(8,7); console.log(number1, number2)">add</button>
+    <button onclick="subtract(8,7)">subtract</button>
+    <script>
+        let number1, number2;
+
+        function add (no1, no2) {
+            number1 = no1;
+            number2 = no2;
+            console.log(number1 + number2);
+            console.log(`You added ${number1} to ${number2}`);
+        }
+        function subtract (number1, number2) {
+            console.log(number1 - number2);
+        }
+
+    </script>
+</body>
+</html>
