@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .subscribe-button {
+            border: none;
+            background-color: red;
+            opacity: 100%;
+            color: white;
+            padding: 12px 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        .subscribed-button {
+            background-color: black;
+        }
+        .calculate-btn {
+            padding: 12px 14px;
+            border-color: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+        }
+        .css-input {
+            border-radius: 5px;
+            border-color: darkgrey;
+            border-width: 1px;
+            padding: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button class="js-btn subscribe-button" onclick="btn()">Subscribe</button>
+    <p>Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input onkeydown="enter(event)" class="js-input css-input" placeholder="Cost of order">
+    <button onclick="clickb()" class="calculate-btn" >Calculate </button>
+    <p class="jp">Cost:</p>
+    <script>
+        function clickb() {
+            let insideBox = Number(document.querySelector('.js-input').value);
+            if (insideBox < 40){
+                insideBox = insideBox + 10;
+            } 
+            document.querySelector('.jp').innerHTML = `Cost: $${insideBox}`
+        }
+        function enter(event) {
+            if (event.key === 'Enter'){
+                clickb();
+            }
+        }
+        function btn () {
+            if (document.querySelector('.js-btn').innerHTML === 'Subscribe'){
+                document.querySelector('.js-btn').innerHTML = 'Subscribed';
+                document.querySelector('.js-btn').classList.add('subscribed-button');
+
+            } else {
+                document.querySelector('.js-btn').innerHTML = 'Subscribe';
+                document.querySelector('.js-btn').classList.remove('subscribed-button');
+            }
+        }
+    </script>
+</body>
+</html>

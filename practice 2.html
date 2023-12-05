@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Name + Surname into an object</h1>
+    <input placeholder="Name" class="js-input-name" type="text">
+    <input placeholder="Surname" class="js-input-surname" type="text">
+    <button onclick="submit()">Submit</button>
+    <p class="js-p">Your name and surname will be placed on here</p>
+    <button onclick="createObject();">Try creating an object</button>
+    <script>
+        function submit () {
+            take();
+            change();
+        }
+        function take() {
+            name = document.querySelector('.js-input-name').value;
+            surname = document.querySelector('.js-input-surname').value;
+        }
+        function change() {
+            document.querySelector('.js-p').innerHTML = 'Welcome' + ' ' + name + ' ' + surname
+        }
+        function createObject() {
+            let object = {
+                name : name,
+                surname : surname
+            }
+            console.log(object)
+        }
+    </script>
+</body>
+</html>

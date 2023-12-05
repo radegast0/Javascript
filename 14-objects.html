@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+            message : 'hello'
+        };
+        console.log(object1.message);
+
+        const object2 = object1; // Javascript copies references, not the object itself
+
+        object1.message = 'Good Job!';
+        console.log(object1.message)
+        console.log(object2)
+
+        const object3 = {
+            message : 'Good Job!'
+        };
+        console.log(object3 === object1);
+        console.log(object2 === object1);
+
+        const object4 = {
+            message : 'Good Job!',
+            no : 4
+        };
+        //const message = object4.message;
+        const { message, no } = object4;
+        console.log(message, no);
+        console.log(no);
+
+        const object5 = {
+            //message: message
+            message,
+            // method: function function1 () {
+            //     console.log('method1');
+            // },
+            method() {
+                console.log('method2')
+            }
+        };
+        console.log(object5)
+        object5.method();
+    </script>
+</body>
+</html>
